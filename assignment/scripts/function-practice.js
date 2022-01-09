@@ -65,10 +65,17 @@ console.log('should return a five', (getLast([1,2,3,4,5])));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
-function find( value, array ){
+let animals = ['tiger', 'bear', 'walrus']
 
+function findElement( animals ) {
+  for (var i = 0; i < animals.length; i++) {
+      if (animals[i] === 'walrus')
+    return true
+  }
+    return false
 }
 
+console.log('should return true', (findElement( animals )));
 // ----------------------
 // Stretch Goals
 // ----------------------
