@@ -14,11 +14,11 @@ console.log('Test - should say "Hello World!"', hello());
 
 // 2. Function to return a personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName() {
-  return 'Hello Maddie';
+function helloName(name) {
+  return 'hello ' + name;
 }
 // Remember to call the function to test
-console.log('Test - should say "Hello Maddie"', helloName());
+console.log('Test - should say "hello colin"', helloName('colin'));
 
 
 // 3. Function to add two numbers together & return the result
@@ -61,21 +61,24 @@ function getLast( numbers ) {
     return numbers.at(-1)
 }
 console.log('should return a five', (getLast([1,2,3,4,5])));
-
+console.log('should return undefined', getLast([]));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 let animals = ['tiger', 'bear', 'walrus']
 
-function findElement( animals ) {
-  for (var i = 0; i < animals.length; i++) {
-      if (animals[i] === 'walrus')
+function findElement( array, value ) {
+  for (let i = 0; i < array.length; i++) {
+      if (array[i] === value)
     return true
   }
     return false
 }
 
-console.log('should return true', (findElement( animals )));
+console.log('should return true', (findElement( animals, 'walrus' )));
+console.log('should return false', (findElement( animals, 'cat' )));
+
+
 // ----------------------
 // Stretch Goals
 // ----------------------
